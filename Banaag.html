@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banaag Publication</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background-color: #f4f7fb;
+      color: #222;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 1rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      background-color: #102542;
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #64b5f6;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #0d47a1;
+      border-left: 4px solid #0d47a1;
+      padding-left: 0.5rem;
+    }
+
+    article {
+      margin-bottom: 2rem;
+    }
+
+    article h3 {
+      color: #102542;
+      margin-bottom: 0.5rem;
+    }
+
+    article p {
+      text-align: justify;
+      line-height: 1.6;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input, textarea {
+      margin: 0.5rem 0;
+      padding: 0.7rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    button {
+      background-color: #0d47a1;
+      color: white;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #1565c0;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #102542;
+      color: white;
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Banaag Publication</h1>
+    <p>The Voice of Montfort Technical Institute</p>
+  </header>
+
+  <nav>
+    <a href="#articles">Articles</a>
+    <a href="#feedback">Feedback</a>
+  </nav>
+
+  <div class="container" id="articles">
+    <h2>Featured Articles</h2>
+
+    <article>
+      <h3>The Light Within: Montfort’s Journey of Creativity</h3>
+      <p>
+        The Banaag Publication continues to serve as a beacon of creativity and expression for students of Montfort Technical Institute. 
+        Through words, art, and passion, Banaag shines light on stories that reflect not only the students’ talents but also their dedication 
+        to truth and purpose. Each publication is a reminder that even the smallest spark can ignite change within the community.
+      </p>
+    </article>
+
+    <article>
+      <h3>Voices of the Youth: A New Generation of Storytellers</h3>
+      <p>
+        In a digital age, Banaag remains a home for aspiring journalists, poets, and thinkers. 
+        Its mission is not only to inform but to inspire — giving every student a platform to be heard and celebrated.
+      </p>
+    </article>
+  </div>
+
+  <div class="container" id="feedback">
+    <h2>Send Us Your Feedback</h2>
+    <form onsubmit="sendFeedback(event)">
+      <input type="text" id="name" placeholder="Your Name" required>
+      <input type="email" id="email" placeholder="Your Email" required>
+      <textarea id="message" rows="5" placeholder="Your Message..." required></textarea>
+      <button type="submit">Submit Feedback</button>
+    </form>
+    <p id="response" style="color:green; margin-top:1rem;"></p>
+  </div>
+
+  <footer>
+    &copy; 2025 Banaag Publication | Montfort Technical Institute
+  </footer>
+
+  <script>
+    function sendFeedback(e) {
+      e.preventDefault();
+      document.getElementById('response').textContent = "Thank you for your feedback! We appreciate your support.";
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
